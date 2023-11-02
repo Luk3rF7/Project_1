@@ -1,6 +1,8 @@
+const emailController = require("../controllers/EmailController");
+
+
 async function EmailRoutes(server) {
-  server.get('/', () => {
-    return "hello World!"
-  })
+
+  server.get('/', emailController.sendEmail);
 }
 module.exports = EmailRoutes;

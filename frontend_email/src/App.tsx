@@ -7,8 +7,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const { mutate, isLoading } = useIdentifyMutation();
-  console.log(isLoading);
+  const { mutate } = useIdentifyMutation();
 
   const submit = () => {
     mutate({
